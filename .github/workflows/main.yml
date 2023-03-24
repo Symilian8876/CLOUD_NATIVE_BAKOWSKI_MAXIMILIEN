@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - run: docker build -t ghcr.io/symilian8876/back:1.0.0 .
+    - run: docker build -t ghcr.io/symilian8876/cloud_native_bakowski_maximilien/back:1.0.0 .
       working-directory: back
       
     - name: Login to GitHub Container Registry
