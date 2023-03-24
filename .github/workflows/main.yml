@@ -15,7 +15,7 @@ jobs:
       
     steps:
     - uses: actions/checkout@v3
-    - run: docker build -t ${{ env.REGISTRY }}/${{ env.ACTOR }}/${{ env.IMAGE_NAME }}:1.0.0 .
+    - run: docker build -t ${{ env.REGISTRY }}/${{ env.ACTOR }}/${{ env.IMAGE_NAME }}/back:1.0.0 .
       working-directory: back
       
     - name: Login to GitHub Container Registry
@@ -26,5 +26,12 @@ jobs:
         password : ${{ secrets.GITHUB_TOKEN }}
 
     - name: Push the image
-      run: docker push ${{ env.REGISTRY }}/${{ env.ACTOR }}/${{ env.IMAGE_NAME }}:1.0.0
+      run: docker push ${{ env.REGISTRY }}/${{ env.ACTOR }}/${{ env.IMAGE_NAME }}/back:1.0.0
+      
+    - name: build and push
+      uses: docker/build-push-action@v4
+      with:
+        context: back
+        push: true
+        tags: ${{ env.REGISTRY }}/${{ env.ACTOR }}/${{ env.IMAGE_NAME }}/back:1.0.0
 
