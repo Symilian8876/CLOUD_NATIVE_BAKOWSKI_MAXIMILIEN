@@ -1,4 +1,4 @@
-name: HelloWorld
+name: Docker Build
 
 on:
   push :
@@ -9,4 +9,8 @@ jobs:
     runs-on: ubuntu:latest
 
     steps:
-    - run: echo "Hello World"
+    - run: actions/checkout@v3
+    - run: docker build -t back .
+      working-directory: back
+    
+    - run: docker --help
