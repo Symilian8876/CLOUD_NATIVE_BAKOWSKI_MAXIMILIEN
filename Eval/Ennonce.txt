@@ -1,0 +1,9 @@
+Blur-detection-webapp
+
+https://github.com/Furkan-Gulsen/Blur-Detection-Web-App
+
+Essayer de lancer l'application sur notre PC
+
+Lancer l'application dans une image docker python
+
+Ecrire le Dockerfile
