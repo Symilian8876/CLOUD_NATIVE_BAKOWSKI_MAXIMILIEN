@@ -2,8 +2,9 @@ Blur-detection-webapp
 
 https://github.com/Furkan-Gulsen/Blur-Detection-Web-App
 
-Essayer de lancer l'application sur notre PC
-
-Lancer l'application dans une image docker python
+Essayer de lancer l'application sur notre PC -> "python.exe main.py" -> Aller sur "http://127.0.0.1:5000"
+-> Aller chercher les images et faire "Extract" -> Possibilité d'erreur mais pas grave vu que le front fonctionne
 
 Ecrire le Dockerfile
+
+Lancer l'application dans une image docker python -> "docker build -t eval ."
